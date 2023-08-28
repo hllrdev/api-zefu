@@ -5,9 +5,7 @@ RUN apt-get install -y  \
     openjdk-17-jdk \
     maven 
 
-WORKDIR /app
-
-RUN mvn clean install
+RUN mvn package
 
 EXPOSE 8080
 
