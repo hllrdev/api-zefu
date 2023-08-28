@@ -1,15 +1,14 @@
-FROM ubuntu:latest AS build
+FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
-COPY . .
+RUN apt-get install -y  \
+    openjdk-17-jdk \
+    maven 
 
-RUN mvn package
+WORKDIR /app
 
-FROM openjdk:17-jdk-slim
+RUN mvn clean install
 
 EXPOSE 8080
 
-COPY target/zefu-1.0.0.jar app.jar
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar"]
