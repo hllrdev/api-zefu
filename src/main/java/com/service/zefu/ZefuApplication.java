@@ -5,6 +5,8 @@ import java.util.Date;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.service.zefu.dtos.UserDTO;
 import com.service.zefu.enums.EnumRole;
@@ -16,6 +18,7 @@ import com.service.zefu.services.ProductService;
 import com.service.zefu.services.RoleService;
 
 @SpringBootApplication
+@RestController
 public class ZefuApplication implements CommandLineRunner {
 
 	private RoleService roleService;
@@ -30,6 +33,11 @@ public class ZefuApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ZefuApplication.class, args);
+	}
+
+	@GetMapping
+	public String hello() {
+		return "Welcome to Zefu API";
 	}
 
 	@Override
