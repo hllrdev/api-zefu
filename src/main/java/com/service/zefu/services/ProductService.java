@@ -47,9 +47,12 @@ public class ProductService {
 
         MultipartFile photo = productDTO.getPhoto();
         String photoName = photo.getOriginalFilename();
-        String[] splitFilename = photoName.split("\\.");
-        String format = splitFilename[splitFilename.length - 1];
-        String pathFile = userModel.getId() + Long.toString(now.getTime()) + "." + format;
+        String pathFile = "";
+        if(photoName !=  null){
+            String[] splitFilename = photoName.split("\\.");
+            String format = splitFilename[splitFilename.length - 1];
+            pathFile = userModel.getId() + Long.toString(now.getTime()) + "." + format;
+        }
 
         byte[] bytes = photo.getBytes();
         String staticPath = resourceLoader.getResource("classpath:static").getFile().getAbsolutePath();
