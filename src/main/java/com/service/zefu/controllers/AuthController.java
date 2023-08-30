@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -24,6 +25,7 @@ import com.service.zefu.services.UserService;
 import jakarta.validation.Valid;
 
 @RestController
+@CrossOrigin(origins = "https://client-zefu.onrender.com")
 @RequestMapping("/auth")
 public class AuthController {
     
