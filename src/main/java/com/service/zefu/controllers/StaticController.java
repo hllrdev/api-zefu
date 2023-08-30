@@ -27,7 +27,7 @@ public class StaticController {
     @GetMapping("/images/{imageName}")
     public ResponseEntity<byte[]> getImage(@PathVariable String imageName) {
         try {
-            Resource resource = resourceLoader.getResource("classpath:classes/static/images/" + imageName);
+            Resource resource = resourceLoader.getResource("classpath:static/images/" + imageName);
             if (!resource.exists()) {
                 return ResponseEntity.notFound().build();
             }
