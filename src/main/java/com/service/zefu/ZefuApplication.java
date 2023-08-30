@@ -92,7 +92,7 @@ public class ZefuApplication implements CommandLineRunner {
 		productModel3.setTitle("Mixer Misturador Multiuso, M150-BR");
 		productModel3.setLink("https://amzn.to/3s8WxGk");
 		// productModel3.setPhoto("/images/mixer.jpg");
-		productModel3.setPhoto("https://m.media-amazon.com/images/I/514G9ERfQDL._AC_SL1500_.jpg");
+		productModel3.setPhoto("https://m.media-amazon.com/images/I/810lkOIIIsL._AC_SL1500_.jpg");
 
 		productModel3.setCreatedAt(now);
 		productModel3.setUpdatedAt(now);
