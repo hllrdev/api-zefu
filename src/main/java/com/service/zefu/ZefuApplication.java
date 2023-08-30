@@ -68,8 +68,9 @@ public class ZefuApplication implements CommandLineRunner {
 
 		ProductModel productModel = new ProductModel();
 		productModel.setTitle("Jogo de colher, Medidor de Cozinha, Tramontina");
-		productModel.setLink("https://amzn.to/47kAhJH");
-		productModel.setPhoto("/images/medidor.jpg");
+		productModel.setLink("https://amzn.to/47kAhJH");		
+		// productModel.setPhoto("/images/medidor.jpg");
+		productModel.setPhoto("https://m.media-amazon.com/images/I/51H8nsVyRrL._AC_SL1000_.jpg");
 
 		productModel.setCreatedAt(now);
 		productModel.setUpdatedAt(now);
@@ -79,7 +80,8 @@ public class ZefuApplication implements CommandLineRunner {
 		ProductModel productModel2 = new ProductModel();
 		productModel2.setTitle("Jogo de panelas c/ alça intercambiável, Tramontina");
 		productModel2.setLink("https://amzn.to/3qiH1XR");
-		productModel2.setPhoto("/images/panelas.jpg");
+		// productModel2.setPhoto("/images/panelas.jpg");
+		productModel2.setPhoto("https://m.media-amazon.com/images/I/517jUpDZooL._AC_SL1000_.jpg");
 
 		productModel2.setCreatedAt(now);
 		productModel2.setUpdatedAt(now);
@@ -89,7 +91,8 @@ public class ZefuApplication implements CommandLineRunner {
 		ProductModel productModel3 = new ProductModel();
 		productModel3.setTitle("Mixer Misturador Multiuso, M150-BR");
 		productModel3.setLink("https://amzn.to/3s8WxGk");
-		productModel3.setPhoto("/images/mixer.jpg");
+		// productModel3.setPhoto("/images/mixer.jpg");
+		productModel3.setPhoto("https://m.media-amazon.com/images/I/514G9ERfQDL._AC_SL1500_.jpg");
 
 		productModel3.setCreatedAt(now);
 		productModel3.setUpdatedAt(now);
@@ -99,7 +102,8 @@ public class ZefuApplication implements CommandLineRunner {
 		ProductModel productModel4 = new ProductModel();
 		productModel4.setTitle("Organizador Inox Suprema, Brinox");
 		productModel4.setLink("https://amzn.to/445s9tz");
-		productModel4.setPhoto("/images/organizador.jpg");
+		// productModel4.setPhoto("/images/organizador.jpg");
+		productModel4.setPhoto("https://m.media-amazon.com/images/I/41LCrM2JxXL._AC_SL1000_.jpg");
 
 		productModel4.setCreatedAt(now);
 		productModel4.setUpdatedAt(now);
@@ -109,7 +113,9 @@ public class ZefuApplication implements CommandLineRunner {
 		ProductModel productModel5 = new ProductModel();
 		productModel5.setTitle("Tigela de cerâmica, Lyor");
 		productModel5.setLink("https://amzn.to/442SIzt");
-		productModel5.setPhoto("/images/tigela.jpg");
+		// productModel5.setPhoto("/images/tigela.jpg");
+		productModel5.setPhoto("https://m.media-amazon.com/images/I/31kv18IvFRL._AC_SL1000_.jpg");
+
 
 		productModel5.setCreatedAt(now);
 		productModel5.setUpdatedAt(now);
