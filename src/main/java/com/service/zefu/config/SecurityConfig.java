@@ -14,11 +14,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import org.springframework.security.web.access.channel.ChannelProcessingFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
 import com.service.zefu.security.jwt.AuthenticationFilterJwt;
 
 @Configuration
@@ -56,7 +51,7 @@ public class SecurityConfig {
                 .requestMatchers("/email").permitAll()
                 .requestMatchers("/products/main", "/products").permitAll()
                 .anyRequest().authenticated())
-                .addFilterBefore(corsFilter(), ChannelProcessingFilter.class)
+                // .addFilterBefore(corsFilter(), ChannelProcessingFilter.class)
                 .addFilterBefore(authenticationFilterJwt, UsernamePasswordAuthenticationFilter.class
             );
 
@@ -80,15 +75,15 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.setAllowedOriginPatterns(List.of("http://localhost:3000", "https://www.zefu.com.br"));
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
+    // @Bean
+    // public CorsFilter corsFilter() {
+    //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    //     CorsConfiguration config = new CorsConfiguration();
+    //     config.setAllowCredentials(true);
+    //     config.setAllowedOriginPatterns(List.of("http://localhost:3000", "https://www.zefu.com.br"));
+    //     config.addAllowedHeader("*");
+    //     config.addAllowedMethod("*");
+    //     source.registerCorsConfiguration("/**", config);
+    //     return new CorsFilter(source);
+    // }
 }
