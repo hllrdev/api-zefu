@@ -25,7 +25,7 @@ import com.service.zefu.services.UserService;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "https://zefu.com.br")
+@CrossOrigin(origins = "https://www.zefu.com.br/")
 @RequestMapping("/auth")
 public class AuthController {
     
