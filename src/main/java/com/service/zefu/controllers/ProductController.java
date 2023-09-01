@@ -22,7 +22,7 @@ import com.service.zefu.services.ProductService;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "https://www.zefu.com.br/")
+@CrossOrigin(origins = "https://www.zefu.com.br")
 @RequestMapping("/products")
 public class ProductController {
 
