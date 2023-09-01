@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.service.zefu.services.UserService;
 
 @RestController
-@CrossOrigin(origins = "https://client-zefu.onrender.com")
+@CrossOrigin(origins = "https://zefu.com.br")
 @RequestMapping("/users")
 public class UserController {
 
