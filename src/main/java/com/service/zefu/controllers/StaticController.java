@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://www.zefu.com.br")
+@CrossOrigin(origins = "https://client-zefu.onrender.com")
 @RequestMapping("/static")
 public class StaticController {
 
