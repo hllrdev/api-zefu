@@ -1,5 +1,7 @@
 package com.service.zefu.config;
 
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -78,7 +80,7 @@ public class SecurityConfig {
     //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     //     CorsConfiguration config = new CorsConfiguration();
     //     config.setAllowCredentials(true);
-    //     config.setAllowedOriginPatterns(List.of("http://localhost:3000"));
+    //     config.setAllowedOriginPatterns(List.of("http://localhost:3000", "https://www.zefu.com.br"));
     //     config.addAllowedHeader("*");
     //     config.addAllowedMethod("*");
     //     source.registerCorsConfiguration("/**", config);
